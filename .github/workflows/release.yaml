@@ -41,6 +41,12 @@ jobs:
       - name: Build
         run: pnpm build
 
+      - name: Upload dist as artifact
+        uses: actions/upload-artifact@v3
+        with:
+         name: power-flow-card-plus
+         path: dist/power-flow-card-plus.js
+
       - name: Release
         run: pnpx semantic-release
         env:

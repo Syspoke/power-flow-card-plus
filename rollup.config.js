@@ -41,11 +41,10 @@ export default [
       }),
       commonjs(),
       babel({
-        exclude: "node_modules/**",
+        exclude: /node_modules\/(?!superstruct)\/.*/,
         babelHelpers: "bundled",
       }),
       ...(dev ? [serve(serveOptions)] : [terser()]),
-      ...(dev ? [serve(serveOptions)] : []),
     ],
     moduleContext: (id) => {
       const thisAsWindowForModules = [

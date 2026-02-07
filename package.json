@@ -12,7 +12,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Syspoke/power-flow-card-plus.git"
+    "url": "git+https://github.com/flixlix/power-flow-card-plus.git"
   },
   "author": "",
   "license": "ISC",

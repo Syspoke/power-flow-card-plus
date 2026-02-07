@@ -49,6 +49,13 @@ jobs:
          name: power-flow-card-plus
          path: dist/power-flow-card-plus.js
 
+      - name: Create GitHub Release with JS only
+        uses: softprops/action-gh-release@v2
+        with:
+          files: dist/*.js
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Release
         run: pnpx semantic-release
         env:
